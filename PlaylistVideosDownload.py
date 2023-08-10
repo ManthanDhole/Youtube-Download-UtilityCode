@@ -1,11 +1,20 @@
 from pytube import Playlist
 import asyncio
-
+import os
 url_of_Playlist = input("Enter the Playlist URL: ")
 
 # Get all the links for video in the playlist
 py = Playlist(url_of_Playlist)
 downloadThisResolution = None  # Only download resolution in the below conditional check, i.e., Video_MP4 | 720p
+
+# Create a folder with the name of playlist and execute the download code after navigating to the new Directory
+currentDir = os.getcwd()
+# print(currentDir)
+if(os.path.exists(f"{currentDir}\{py.title}")):
+    os.chdir(py.title)      #Change directory
+else:    
+    os.mkdir(py.title)   	#Make directory
+    os.chdir(py.title)
 
 print(f'Downloading Playlist: {py.title}')
 
