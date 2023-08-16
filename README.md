@@ -1,5 +1,5 @@
 # Youtube-Download-UtilityCode 
-Use the utility code to download single videos or playlists directly from youtube.
+Use the utility code to download single video or playlists directly from youtube.
 
 1. (Optional) Install Python from the official website: https://www.python.org/downloads/ 
 2. Create a new folder in a desired location
